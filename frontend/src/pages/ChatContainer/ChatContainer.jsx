@@ -29,7 +29,7 @@ export default function ChatContainer({ currentChat, socket }) {
       if (user && currentChat) { 
         try {
           const response = await axios.post(
-            "http://localhost:5000/api/messages/getmsg",
+            "https://chatting-app-api.vercel.app/api/messages/getmsg",
             {
               from: user._id,
               to: currentChat._id,
@@ -52,7 +52,7 @@ export default function ChatContainer({ currentChat, socket }) {
           from: user._id,
           msg,
         });
-        await axios.post("http://localhost:5000/api/messages/addmsg", {
+        await axios.post("https://chatting-app-api.vercel.app/api/messages/addmsg", {
           from: user._id,
           to: currentChat._id,
           message: msg,
