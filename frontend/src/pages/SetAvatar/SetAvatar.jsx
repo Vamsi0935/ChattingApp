@@ -54,7 +54,7 @@ export default function SetAvatar() {
           localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
         );
         const { data } = await axios.post(
-          `http://localhost:5000/api/auth/setavatar/${user._id}`,
+          `https://chatting-app-api.vercel.app/api/auth/setavatar/${user._id}`,
           {
             image: avatars[selectedAvatar],
           }
