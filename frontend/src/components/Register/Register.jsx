@@ -65,7 +65,7 @@ export default function Register() {
     if (handleValidation()) {
       const { email, username, password } = values;
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://chatting-app-api.vercel.app/api/auth/register",
         {
           username,
           email,
