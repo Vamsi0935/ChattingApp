@@ -31,7 +31,7 @@ app.use("/api/messages", messageRoutes);
 const server = app.listen(5000, () => console.log(`Server is running.....`));
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatting-app-frontend-ten.vercel.app",
     credentials: true,
   },
 });
