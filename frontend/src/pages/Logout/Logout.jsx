@@ -10,7 +10,7 @@ export default function Logout() {
     const id = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     )._id;
-    const data = await axios.get(`http://localhost:5000/api/auth/logout/${id}`);
+    const data = await axios.get(`https://chatting-app-api.vercel.app/api/auth/logout/${id}`);
     if (data.status === 200) {
       localStorage.clear();
       navigate("/");
