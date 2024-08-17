@@ -43,7 +43,7 @@ export default function Login() {
     if (validateForm()) {
       const { username, password } = values;
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://chatting-app-api.vercel.app/api/auth/login",
         {
           username,
           password,
