@@ -29,7 +29,7 @@ export default function Chat() {
 
   useEffect(() => {
     if (currentUser) {
-      socket.current = io("http://localhost:5000");
+      socket.current = io("https://chatting-app-api.vercel.app");
       socket.current.emit("add-user", currentUser._id);
 
       return () => {
@@ -43,7 +43,7 @@ export default function Chat() {
       if (currentUser.isAvatarImageSet) {
         try {
           const { data } = await axios.get(
-            `http://localhost:5000/api/auth/allusers/${currentUser._id}`
+            `https://chatting-app-api.vercel.app/api/auth/allusers/${currentUser._id}`
           );
           setContacts(data);
         } catch (error) {
